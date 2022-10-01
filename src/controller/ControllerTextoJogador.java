@@ -55,4 +55,11 @@ public class ControllerTextoJogador extends ControllerArquivoTexto {
         }
     }
     
+    public void editar(int indice, Jogador jo ){
+        j.get(indice).setNome(jo.getNome());
+        j.get(indice).setIdade(jo.getIdade());
+        j.get(indice).setPosicao(jo.getPosicao());
+        setTexto(" Nome: " + j.get(indice).getNome() + "\n Idade: " + String.valueOf(j.get(indice).getIdade()) + " \n Posição: " + j.get(indice).getPosicao());
+    }
+    
 }

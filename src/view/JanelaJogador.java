@@ -100,6 +100,11 @@ public class JanelaJogador extends javax.swing.JFrame {
         jButtonProximo.setText("Próximo ->");
 
         jButtonEditar.setText("Editar");
+        jButtonEditar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonEditarActionPerformed(evt);
+            }
+        });
 
         jMenuArquivo.setText("Arquivo");
 
@@ -241,6 +246,16 @@ public class JanelaJogador extends javax.swing.JFrame {
         }
         jTextAreaJogador.setText(controller.getTexto());
     }//GEN-LAST:event_jButtonExcluirActionPerformed
+
+    private void jButtonEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEditarActionPerformed
+        // TODO add your handling code here:
+        Jogador jo = new Jogador();
+        jo.setNome(jTextFieldNome.getText());
+        jo.setIdade(Integer.parseInt(jTextFieldIdade.getText()));
+        jo.setPosicao(jTextFieldPosicao.getText());
+        controller.editar(Integer.parseInt(jLabelPosicaoJogador.getText()) - 1, jo);
+        jTextAreaJogador.setText(controller.getTexto());
+    }//GEN-LAST:event_jButtonEditarActionPerformed
 
     /**
      * @param args the command line arguments
