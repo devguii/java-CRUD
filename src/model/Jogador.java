@@ -24,7 +24,7 @@ public class Jogador {
     }
     
     public String getPosicao(){
-        return this.nome;
+        return this.posicao;
     }
     
     public void setPosicao(String posicao){
