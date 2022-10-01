@@ -43,4 +43,16 @@ public class ControllerTextoJogador extends ControllerArquivoTexto {
         setTexto(" Nome: " + jo.getNome() + "\n Idade: " + String.valueOf(jo.getIdade()) + " \n Posição: " + jo.getPosicao());
     }
     
+    public void excluir(int indice){
+        if(indice == 0){
+            j.remove(indice);
+            setTexto("");
+        } else if(indice < 0) {
+            setTexto("");
+        } else {
+            j.remove(indice);
+            setTexto(" Nome: " + j.get(indice - 1).getNome() + "\n Idade: " + String.valueOf(j.get(indice - 1).getIdade()) + " \n Posição: " + j.get(indice - 1).getPosicao());
+        }
+    }
+    
 }

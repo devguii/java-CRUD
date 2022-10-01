@@ -89,6 +89,11 @@ public class JanelaJogador extends javax.swing.JFrame {
         jLabelPosicaoJogadorComplemento.setText("° Jogador");
 
         jButtonExcluir.setText("Excluir");
+        jButtonExcluir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonExcluirActionPerformed(evt);
+            }
+        });
 
         jButtonAnterior.setText("<- Anterior");
 
@@ -226,6 +231,16 @@ public class JanelaJogador extends javax.swing.JFrame {
         jLabelPosicaoJogador.setText(String.valueOf(controller.getJ().indexOf(jogador) + 1));
         jTextAreaJogador.setText(controller.getTexto());
     }//GEN-LAST:event_jButtonAdicionarActionPerformed
+
+    private void jButtonExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonExcluirActionPerformed
+        // TODO add your handling code here:
+        controller.excluir(Integer.parseInt(jLabelPosicaoJogador.getText()) - 1);
+        if (Integer.parseInt(jLabelPosicaoJogador.getText()) > 0){
+            jLabelPosicaoJogador.setText(String.valueOf(Integer.parseInt(jLabelPosicaoJogador.getText()) - 1));
+        } else {
+        }
+        jTextAreaJogador.setText(controller.getTexto());
+    }//GEN-LAST:event_jButtonExcluirActionPerformed
 
     /**
      * @param args the command line arguments
