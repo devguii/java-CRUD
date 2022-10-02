@@ -245,6 +245,9 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Pr&#xf3;ximo -&gt;"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonProximoActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="jButtonEditar">
       <Properties>

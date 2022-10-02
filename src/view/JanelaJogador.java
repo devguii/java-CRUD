@@ -98,6 +98,11 @@ public class JanelaJogador extends javax.swing.JFrame {
         jButtonAnterior.setText("<- Anterior");
 
         jButtonProximo.setText("Próximo ->");
+        jButtonProximo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonProximoActionPerformed(evt);
+            }
+        });
 
         jButtonEditar.setText("Editar");
         jButtonEditar.addActionListener(new java.awt.event.ActionListener() {
@@ -256,6 +261,18 @@ public class JanelaJogador extends javax.swing.JFrame {
         controller.editar(Integer.parseInt(jLabelPosicaoJogador.getText()) - 1, jo);
         jTextAreaJogador.setText(controller.getTexto());
     }//GEN-LAST:event_jButtonEditarActionPerformed
+
+    private void jButtonProximoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonProximoActionPerformed
+        // TODO add your handling code here:
+        if(Integer.parseInt(jLabelPosicaoJogador.getText()) == controller.getJ().size()){
+            
+        } else {
+            controller.proximo(Integer.parseInt(jLabelPosicaoJogador.getText()));
+            jLabelPosicaoJogador.setText(String.valueOf(jLabelPosicaoJogador.getText() + 1));
+            jTextAreaJogador.setText(controller.getTexto());
+        }
+        
+    }//GEN-LAST:event_jButtonProximoActionPerformed
 
     /**
      * @param args the command line arguments

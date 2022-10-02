@@ -62,4 +62,8 @@ public class ControllerTextoJogador extends ControllerArquivoTexto {
         setTexto(" Nome: " + j.get(indice).getNome() + "\n Idade: " + String.valueOf(j.get(indice).getIdade()) + " \n Posição: " + j.get(indice).getPosicao());
     }
     
+    public void proximo(int indice){
+        setTexto(" Nome: " + j.get(indice).getNome() + "\n Idade: " + String.valueOf(j.get(indice).getIdade()) + " \n Posição: " + j.get(indice).getPosicao());
+    }
+    
 }
