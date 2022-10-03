@@ -66,13 +66,13 @@
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jLabelPosicao" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabelIdade" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelPais" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelFundacao" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="jTextFieldNome" alignment="0" min="-2" pref="175" max="-2" attributes="0"/>
-                          <Component id="jTextFieldIdade" alignment="0" min="-2" pref="64" max="-2" attributes="0"/>
+                          <Component id="jTextFieldFundacao" alignment="0" min="-2" pref="64" max="-2" attributes="0"/>
                           <Component id="jLabelNome" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Group type="102" alignment="0" attributes="0">
-                              <Component id="jTextFieldPosicao" min="-2" pref="119" max="-2" attributes="0"/>
+                              <Component id="jTextFieldPais" min="-2" pref="119" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Component id="jButtonEditar" min="-2" max="-2" attributes="0"/>
                           </Group>
@@ -82,9 +82,9 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" attributes="0">
                                       <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
-                                      <Component id="jLabelPosicaoJogador" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabelPosicaoClube" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="jLabelPosicaoJogadorComplemento" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabelPosicaoClubeComplemento" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
@@ -105,42 +105,42 @@
               </Group>
           </Group>
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="97" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="120" max="-2" attributes="0"/>
               <Component id="jLabelTitle" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="32767" attributes="0"/>
+              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="1" attributes="0">
-              <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
-              <Component id="jLabelTitle" min="-2" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="64" max="-2" attributes="0"/>
                       <Component id="jLabelNome" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jTextFieldNome" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jLabelIdade" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabelFundacao" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jTextFieldIdade" min="-2" max="-2" attributes="0"/>
+                      <Component id="jTextFieldFundacao" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jLabelPosicao" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabelPais" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="jTextFieldPosicao" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTextFieldPais" min="-2" max="-2" attributes="0"/>
                           <Component id="jButtonEditar" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace max="32767" attributes="0"/>
+                      <EmptySpace pref="68" max="32767" attributes="0"/>
                       <Component id="jButtonSair" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace pref="26" max="32767" attributes="0"/>
+                      <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
+                      <Component id="jLabelTitle" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabelPosicaoJogador" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabelPosicaoJogadorComplemento" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelPosicaoClube" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelPosicaoClubeComplemento" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="jScrollPane1" min="-2" pref="96" max="-2" attributes="0"/>
@@ -154,7 +154,7 @@
                           <Component id="jButtonAdicionar" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jButtonExcluir" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="0" pref="26" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="40" max="32767" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
@@ -176,7 +176,7 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Arial Black" size="24" style="1"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Cadastro de Jogadores"/>
+        <Property name="text" type="java.lang.String" value="Cadastro de Clubes"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabelNome">
@@ -186,19 +186,19 @@
     </Component>
     <Component class="javax.swing.JTextField" name="jTextFieldNome">
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabelIdade">
+    <Component class="javax.swing.JLabel" name="jLabelFundacao">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Idade:"/>
+        <Property name="text" type="java.lang.String" value="Ano de Funda&#xe7;&#xe3;o:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="jTextFieldIdade">
+    <Component class="javax.swing.JTextField" name="jTextFieldFundacao">
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabelPosicao">
+    <Component class="javax.swing.JLabel" name="jLabelPais">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Posi&#xe7;&#xe3;o:"/>
+        <Property name="text" type="java.lang.String" value="Pa&#xed;s:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="jTextFieldPosicao">
+    <Component class="javax.swing.JTextField" name="jTextFieldPais">
     </Component>
     <Component class="javax.swing.JButton" name="jButtonAdicionar">
       <Properties>
@@ -215,7 +215,7 @@
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
       <SubComponents>
-        <Component class="javax.swing.JTextArea" name="jTextAreaJogador">
+        <Component class="javax.swing.JTextArea" name="jTextAreaClube">
           <Properties>
             <Property name="columns" type="int" value="20"/>
             <Property name="rows" type="int" value="5"/>
@@ -223,7 +223,7 @@
         </Component>
       </SubComponents>
     </Container>
-    <Component class="javax.swing.JLabel" name="jLabelPosicaoJogador">
+    <Component class="javax.swing.JLabel" name="jLabelPosicaoClube">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Lucida Grande" size="14" style="1"/>
@@ -231,9 +231,9 @@
         <Property name="text" type="java.lang.String" value="0"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabelPosicaoJogadorComplemento">
+    <Component class="javax.swing.JLabel" name="jLabelPosicaoClubeComplemento">
       <Properties>
-        <Property name="text" type="java.lang.String" value="&#xb0; Jogador"/>
+        <Property name="text" type="java.lang.String" value="&#xb0; Clube"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="jButtonExcluir">

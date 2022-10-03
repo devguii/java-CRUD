@@ -5,22 +5,22 @@
  */
 package view;
 
-import controller.ControllerTextoJogador;
+import controller.ControllerTextoClube;
 import javax.swing.JOptionPane;
-import model.Jogador;
+import model.Clube;
 
 /**
  *
  * @author Guilherme Antunes
  */
-public class JanelaJogador extends javax.swing.JFrame {
+public class JanelaClube extends javax.swing.JFrame {
     
-    ControllerTextoJogador controller = new ControllerTextoJogador();
+    ControllerTextoClube controller = new ControllerTextoClube();
 
     /**
-     * Creates new form JanelaJogador
+     * Creates new form JanelaClube
      */
-    public JanelaJogador() {
+    public JanelaClube() {
         initComponents();
     }
 
@@ -37,15 +37,15 @@ public class JanelaJogador extends javax.swing.JFrame {
         jLabelTitle = new javax.swing.JLabel();
         jLabelNome = new javax.swing.JLabel();
         jTextFieldNome = new javax.swing.JTextField();
-        jLabelIdade = new javax.swing.JLabel();
-        jTextFieldIdade = new javax.swing.JTextField();
-        jLabelPosicao = new javax.swing.JLabel();
-        jTextFieldPosicao = new javax.swing.JTextField();
+        jLabelFundacao = new javax.swing.JLabel();
+        jTextFieldFundacao = new javax.swing.JTextField();
+        jLabelPais = new javax.swing.JLabel();
+        jTextFieldPais = new javax.swing.JTextField();
         jButtonAdicionar = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextAreaJogador = new javax.swing.JTextArea();
-        jLabelPosicaoJogador = new javax.swing.JLabel();
-        jLabelPosicaoJogadorComplemento = new javax.swing.JLabel();
+        jTextAreaClube = new javax.swing.JTextArea();
+        jLabelPosicaoClube = new javax.swing.JLabel();
+        jLabelPosicaoClubeComplemento = new javax.swing.JLabel();
         jButtonExcluir = new javax.swing.JButton();
         jButtonAnterior = new javax.swing.JButton();
         jButtonProximo = new javax.swing.JButton();
@@ -65,13 +65,13 @@ public class JanelaJogador extends javax.swing.JFrame {
         });
 
         jLabelTitle.setFont(new java.awt.Font("Arial Black", 1, 24)); // NOI18N
-        jLabelTitle.setText("Cadastro de Jogadores");
+        jLabelTitle.setText("Cadastro de Clubes");
 
         jLabelNome.setText("Nome:");
 
-        jLabelIdade.setText("Idade:");
+        jLabelFundacao.setText("Ano de Fundação:");
 
-        jLabelPosicao.setText("Posição:");
+        jLabelPais.setText("País:");
 
         jButtonAdicionar.setText("Adicionar");
         jButtonAdicionar.addActionListener(new java.awt.event.ActionListener() {
@@ -80,14 +80,14 @@ public class JanelaJogador extends javax.swing.JFrame {
             }
         });
 
-        jTextAreaJogador.setColumns(20);
-        jTextAreaJogador.setRows(5);
-        jScrollPane1.setViewportView(jTextAreaJogador);
+        jTextAreaClube.setColumns(20);
+        jTextAreaClube.setRows(5);
+        jScrollPane1.setViewportView(jTextAreaClube);
 
-        jLabelPosicaoJogador.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
-        jLabelPosicaoJogador.setText("0");
+        jLabelPosicaoClube.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
+        jLabelPosicaoClube.setText("0");
 
-        jLabelPosicaoJogadorComplemento.setText("° Jogador");
+        jLabelPosicaoClubeComplemento.setText("° Clube");
 
         jButtonExcluir.setText("Excluir");
         jButtonExcluir.addActionListener(new java.awt.event.ActionListener() {
@@ -155,13 +155,13 @@ public class JanelaJogador extends javax.swing.JFrame {
                         .addContainerGap())
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabelPosicao)
-                            .addComponent(jLabelIdade)
+                            .addComponent(jLabelPais)
+                            .addComponent(jLabelFundacao)
                             .addComponent(jTextFieldNome, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextFieldIdade, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextFieldFundacao, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabelNome)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jTextFieldPosicao, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jTextFieldPais, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
                                 .addComponent(jButtonEditar)))
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -169,9 +169,9 @@ public class JanelaJogador extends javax.swing.JFrame {
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(layout.createSequentialGroup()
                                         .addGap(37, 37, 37)
-                                        .addComponent(jLabelPosicaoJogador)
+                                        .addComponent(jLabelPosicaoClube)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jLabelPosicaoJogadorComplemento))
+                                        .addComponent(jLabelPosicaoClubeComplemento))
                                     .addGroup(layout.createSequentialGroup()
                                         .addGap(24, 24, 24)
                                         .addComponent(jButtonAnterior, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -183,38 +183,38 @@ public class JanelaJogador extends javax.swing.JFrame {
                                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 218, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))))
             .addGroup(layout.createSequentialGroup()
-                .addGap(97, 97, 97)
+                .addGap(120, 120, 120)
                 .addComponent(jLabelTitle)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(14, 14, 14)
-                .addComponent(jLabelTitle)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(15, 15, 15)
+                        .addGap(64, 64, 64)
                         .addComponent(jLabelNome)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jTextFieldNome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabelIdade)
+                        .addComponent(jLabelFundacao)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextFieldIdade, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jTextFieldFundacao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabelPosicao)
+                        .addComponent(jLabelPais)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jTextFieldPosicao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextFieldPais, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jButtonEditar))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 68, Short.MAX_VALUE)
                         .addComponent(jButtonSair))
                     .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
+                        .addGap(8, 8, 8)
+                        .addComponent(jLabelTitle)
+                        .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabelPosicaoJogador)
-                            .addComponent(jLabelPosicaoJogadorComplemento))
+                            .addComponent(jLabelPosicaoClube)
+                            .addComponent(jLabelPosicaoClubeComplemento))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
@@ -225,7 +225,7 @@ public class JanelaJogador extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jButtonAdicionar)
                             .addComponent(jButtonExcluir))
-                        .addGap(0, 26, Short.MAX_VALUE)))
+                        .addGap(0, 40, Short.MAX_VALUE)))
                 .addContainerGap())
         );
 
@@ -236,9 +236,9 @@ public class JanelaJogador extends javax.swing.JFrame {
         // TODO add your handling code here:
         controller.setArquivo("Abrir");
         if (controller.ler()) {
-            controller.lerJogador();
-            jLabelPosicaoJogador.setText("0");
-            jTextAreaJogador.setText(" Arquivo Carregado! \n Clique em próximo...");
+            controller.lerClube();
+            jLabelPosicaoClube.setText("0");
+            jTextAreaClube.setText(" Arquivo Carregado! \n Clique em próximo...");
         }
     }//GEN-LAST:event_jMenuItemAbrirActionPerformed
 
@@ -250,13 +250,13 @@ public class JanelaJogador extends javax.swing.JFrame {
     private void jButtonAdicionarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAdicionarActionPerformed
         // TODO add your handling code here:
         try{
-            Jogador jogador = new Jogador();
-            jogador.setNome(jTextFieldNome.getText());
-            jogador.setIdade(Integer.parseInt(jTextFieldIdade.getText()));
-            jogador.setPosicao(jTextFieldPosicao.getText());
-            controller.adicionar(jogador);
-            jLabelPosicaoJogador.setText(String.valueOf(controller.getJ().indexOf(jogador) + 1));
-            jTextAreaJogador.setText(controller.getTexto());
+            Clube clube = new Clube();
+            clube.setNome(jTextFieldNome.getText());
+            clube.setFundacao(Integer.parseInt(jTextFieldFundacao.getText()));
+            clube.setPais(jTextFieldPais.getText());
+            controller.adicionar(clube);
+            jLabelPosicaoClube.setText(String.valueOf(controller.getC().indexOf(clube) + 1));
+            jTextAreaClube.setText(controller.getTexto());
         } catch (Exception e) {
             JOptionPane.showMessageDialog(this,
                     "Preencha todos os campos corretamente para adicionar.",
@@ -267,23 +267,23 @@ public class JanelaJogador extends javax.swing.JFrame {
 
     private void jButtonExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonExcluirActionPerformed
         // TODO add your handling code here:
-        controller.excluir(Integer.parseInt(jLabelPosicaoJogador.getText()) - 1);
-        if (Integer.parseInt(jLabelPosicaoJogador.getText()) > 0){
-            jLabelPosicaoJogador.setText(String.valueOf(Integer.parseInt(jLabelPosicaoJogador.getText()) - 1));
+        controller.excluir(Integer.parseInt(jLabelPosicaoClube.getText()) - 1);
+        if (Integer.parseInt(jLabelPosicaoClube.getText()) > 0){
+            jLabelPosicaoClube.setText(String.valueOf(Integer.parseInt(jLabelPosicaoClube.getText()) - 1));
         } else {
         }
-        jTextAreaJogador.setText(controller.getTexto());
+        jTextAreaClube.setText(controller.getTexto());
     }//GEN-LAST:event_jButtonExcluirActionPerformed
 
     private void jButtonEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEditarActionPerformed
         // TODO add your handling code here:
         try{
-            Jogador jo = new Jogador();
-            jo.setNome(jTextFieldNome.getText());
-            jo.setIdade(Integer.parseInt(jTextFieldIdade.getText()));
-            jo.setPosicao(jTextFieldPosicao.getText());
-            controller.editar(Integer.parseInt(jLabelPosicaoJogador.getText()) - 1, jo);
-            jTextAreaJogador.setText(controller.getTexto());
+            Clube cl = new Clube();
+            cl.setNome(jTextFieldNome.getText());
+            cl.setFundacao(Integer.parseInt(jTextFieldFundacao.getText()));
+            cl.setPais(jTextFieldPais.getText());
+            controller.editar(Integer.parseInt(jLabelPosicaoClube.getText()) - 1, cl);
+            jTextAreaClube.setText(controller.getTexto());
         } catch (Exception e) {
             JOptionPane.showMessageDialog(this,
                     "Verifique as entradas de dados, no caso do preenchimento correto dos campos, verifique se aparece algo na lista para editar.",
@@ -294,31 +294,31 @@ public class JanelaJogador extends javax.swing.JFrame {
 
     private void jButtonProximoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonProximoActionPerformed
         // TODO add your handling code here:
-        if(Integer.parseInt(jLabelPosicaoJogador.getText()) == controller.getJ().size()){
+        if(Integer.parseInt(jLabelPosicaoClube.getText()) == controller.getC().size()){
             
         } else {
-            controller.proximo(Integer.parseInt(jLabelPosicaoJogador.getText()));
-            jLabelPosicaoJogador.setText(String.valueOf(Integer.parseInt(jLabelPosicaoJogador.getText()) + 1));
-            jTextAreaJogador.setText(controller.getTexto());
+            controller.proximo(Integer.parseInt(jLabelPosicaoClube.getText()));
+            jLabelPosicaoClube.setText(String.valueOf(Integer.parseInt(jLabelPosicaoClube.getText()) + 1));
+            jTextAreaClube.setText(controller.getTexto());
         }
         
     }//GEN-LAST:event_jButtonProximoActionPerformed
 
     private void jButtonAnteriorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAnteriorActionPerformed
         // TODO add your handling code here:
-        if(Integer.parseInt(jLabelPosicaoJogador.getText()) < 2){
+        if(Integer.parseInt(jLabelPosicaoClube.getText()) < 2){
             
         } else {
-            controller.anterior(Integer.parseInt(jLabelPosicaoJogador.getText()) - 1);
-            jLabelPosicaoJogador.setText(String.valueOf(Integer.parseInt(jLabelPosicaoJogador.getText()) - 1));
-            jTextAreaJogador.setText(controller.getTexto());
+            controller.anterior(Integer.parseInt(jLabelPosicaoClube.getText()) - 1);
+            jLabelPosicaoClube.setText(String.valueOf(Integer.parseInt(jLabelPosicaoClube.getText()) - 1));
+            jTextAreaClube.setText(controller.getTexto());
         }
     }//GEN-LAST:event_jButtonAnteriorActionPerformed
 
     private void jMenuItemSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemSalvarActionPerformed
         // TODO add your handling code here:
         controller.setArquivo("Salvar");
-        controller.escreverJogador();
+        controller.escreverClube();
         if (controller.escrever(false)) {
             JOptionPane.showMessageDialog(this,
                     "Arquivo gravado com sucesso",
@@ -349,20 +349,20 @@ public class JanelaJogador extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(JanelaJogador.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(JanelaClube.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(JanelaJogador.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(JanelaClube.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(JanelaJogador.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(JanelaClube.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(JanelaJogador.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(JanelaClube.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new JanelaJogador().setVisible(true);
+                new JanelaClube().setVisible(true);
             }
         });
     }
@@ -374,20 +374,20 @@ public class JanelaJogador extends javax.swing.JFrame {
     private javax.swing.JButton jButtonExcluir;
     private javax.swing.JButton jButtonProximo;
     private javax.swing.JButton jButtonSair;
-    private javax.swing.JLabel jLabelIdade;
+    private javax.swing.JLabel jLabelFundacao;
     private javax.swing.JLabel jLabelNome;
-    private javax.swing.JLabel jLabelPosicao;
-    private javax.swing.JLabel jLabelPosicaoJogador;
-    private javax.swing.JLabel jLabelPosicaoJogadorComplemento;
+    private javax.swing.JLabel jLabelPais;
+    private javax.swing.JLabel jLabelPosicaoClube;
+    private javax.swing.JLabel jLabelPosicaoClubeComplemento;
     private javax.swing.JLabel jLabelTitle;
     private javax.swing.JMenu jMenuArquivo;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItemAbrir;
     private javax.swing.JMenuItem jMenuItemSalvar;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextAreaJogador;
-    private javax.swing.JTextField jTextFieldIdade;
+    private javax.swing.JTextArea jTextAreaClube;
+    private javax.swing.JTextField jTextFieldFundacao;
     private javax.swing.JTextField jTextFieldNome;
-    private javax.swing.JTextField jTextFieldPosicao;
+    private javax.swing.JTextField jTextFieldPais;
     // End of variables declaration//GEN-END:variables
 }
