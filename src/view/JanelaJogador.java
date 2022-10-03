@@ -96,6 +96,11 @@ public class JanelaJogador extends javax.swing.JFrame {
         });
 
         jButtonAnterior.setText("<- Anterior");
+        jButtonAnterior.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonAnteriorActionPerformed(evt);
+            }
+        });
 
         jButtonProximo.setText("Próximo ->");
         jButtonProximo.addActionListener(new java.awt.event.ActionListener() {
@@ -268,11 +273,22 @@ public class JanelaJogador extends javax.swing.JFrame {
             
         } else {
             controller.proximo(Integer.parseInt(jLabelPosicaoJogador.getText()));
-            jLabelPosicaoJogador.setText(String.valueOf(jLabelPosicaoJogador.getText() + 1));
+            jLabelPosicaoJogador.setText(String.valueOf(Integer.parseInt(jLabelPosicaoJogador.getText()) + 1));
             jTextAreaJogador.setText(controller.getTexto());
         }
         
     }//GEN-LAST:event_jButtonProximoActionPerformed
+
+    private void jButtonAnteriorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAnteriorActionPerformed
+        // TODO add your handling code here:
+        if(Integer.parseInt(jLabelPosicaoJogador.getText()) < 2){
+            
+        } else {
+            controller.anterior(Integer.parseInt(jLabelPosicaoJogador.getText()) - 1);
+            jLabelPosicaoJogador.setText(String.valueOf(Integer.parseInt(jLabelPosicaoJogador.getText()) - 1));
+            jTextAreaJogador.setText(controller.getTexto());
+        }
+    }//GEN-LAST:event_jButtonAnteriorActionPerformed
 
     /**
      * @param args the command line arguments
