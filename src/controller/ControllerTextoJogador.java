@@ -27,15 +27,29 @@ public class ControllerTextoJogador extends ControllerArquivoTexto {
         aux = getTexto();
         
         StringTokenizer string = new StringTokenizer(aux, ";");
+       
+        j.clear();
         
         while (string.hasMoreTokens() == true) { 
             Jogador jogador = new Jogador();
             jogador.setNome(string.nextToken());
             jogador.setIdade(Integer.parseInt(string.nextToken()));
-            jogador.setPosicao(string.nextToken());;
+            jogador.setPosicao(string.nextToken());
             j.add(jogador);
         }
         
+    }
+    
+    public void escreverJogador(){
+        StringBuilder sb = new StringBuilder();
+        
+        for (Jogador jo : j) {
+         sb.append(jo.getNome()).append(";");
+         sb.append(jo.getIdade()).append(";");
+         sb.append(jo.getPosicao()).append(";");
+      }
+        
+        setTexto(sb.toString());
     }
     
     public void adicionar(Jogador jo){

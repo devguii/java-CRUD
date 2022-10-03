@@ -6,6 +6,7 @@
 package view;
 
 import controller.ControllerTextoJogador;
+import javax.swing.JOptionPane;
 import model.Jogador;
 
 /**
@@ -127,6 +128,11 @@ public class JanelaJogador extends javax.swing.JFrame {
         jMenuArquivo.add(jMenuItemAbrir);
 
         jMenuItemSalvar.setText("Salvar");
+        jMenuItemSalvar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemSalvarActionPerformed(evt);
+            }
+        });
         jMenuArquivo.add(jMenuItemSalvar);
 
         jMenuBar1.add(jMenuArquivo);
@@ -159,20 +165,23 @@ public class JanelaJogador extends javax.swing.JFrame {
                                 .addGap(18, 18, 18)
                                 .addComponent(jButtonEditar)))
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(37, 37, 37)
+                                        .addComponent(jLabelPosicaoJogador)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jLabelPosicaoJogadorComplemento))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(24, 24, 24)
+                                        .addComponent(jButtonAnterior, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(jButtonProximo, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(0, 42, Short.MAX_VALUE))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(37, 37, 37)
-                                .addComponent(jLabelPosicaoJogador)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabelPosicaoJogadorComplemento))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(24, 24, 24)
-                                .addComponent(jButtonAnterior, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jButtonProximo, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 42, Short.MAX_VALUE))))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 218, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))))
             .addGroup(layout.createSequentialGroup()
                 .addGap(97, 97, 97)
                 .addComponent(jLabelTitle)
@@ -228,6 +237,8 @@ public class JanelaJogador extends javax.swing.JFrame {
         controller.setArquivo("Abrir");
         if (controller.ler()) {
             controller.lerJogador();
+            jLabelPosicaoJogador.setText("0");
+            jTextAreaJogador.setText(" Arquivo Carregado! \n Clique em próximo...");
         }
     }//GEN-LAST:event_jMenuItemAbrirActionPerformed
 
@@ -238,13 +249,20 @@ public class JanelaJogador extends javax.swing.JFrame {
 
     private void jButtonAdicionarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAdicionarActionPerformed
         // TODO add your handling code here:
-        Jogador jogador = new Jogador();
-        jogador.setNome(jTextFieldNome.getText());
-        jogador.setIdade(Integer.parseInt(jTextFieldIdade.getText()));
-        jogador.setPosicao(jTextFieldPosicao.getText());
-        controller.adicionar(jogador);
-        jLabelPosicaoJogador.setText(String.valueOf(controller.getJ().indexOf(jogador) + 1));
-        jTextAreaJogador.setText(controller.getTexto());
+        try{
+            Jogador jogador = new Jogador();
+            jogador.setNome(jTextFieldNome.getText());
+            jogador.setIdade(Integer.parseInt(jTextFieldIdade.getText()));
+            jogador.setPosicao(jTextFieldPosicao.getText());
+            controller.adicionar(jogador);
+            jLabelPosicaoJogador.setText(String.valueOf(controller.getJ().indexOf(jogador) + 1));
+            jTextAreaJogador.setText(controller.getTexto());
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this,
+                    "Preencha todos os campos corretamente para adicionar.",
+                    "Erro de entrada de dados",
+                    JOptionPane.ERROR_MESSAGE);  
+        }
     }//GEN-LAST:event_jButtonAdicionarActionPerformed
 
     private void jButtonExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonExcluirActionPerformed
@@ -259,12 +277,19 @@ public class JanelaJogador extends javax.swing.JFrame {
 
     private void jButtonEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEditarActionPerformed
         // TODO add your handling code here:
-        Jogador jo = new Jogador();
-        jo.setNome(jTextFieldNome.getText());
-        jo.setIdade(Integer.parseInt(jTextFieldIdade.getText()));
-        jo.setPosicao(jTextFieldPosicao.getText());
-        controller.editar(Integer.parseInt(jLabelPosicaoJogador.getText()) - 1, jo);
-        jTextAreaJogador.setText(controller.getTexto());
+        try{
+            Jogador jo = new Jogador();
+            jo.setNome(jTextFieldNome.getText());
+            jo.setIdade(Integer.parseInt(jTextFieldIdade.getText()));
+            jo.setPosicao(jTextFieldPosicao.getText());
+            controller.editar(Integer.parseInt(jLabelPosicaoJogador.getText()) - 1, jo);
+            jTextAreaJogador.setText(controller.getTexto());
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this,
+                    "Verifique as entradas de dados, no caso do preenchimento correto dos campos, verifique se aparece algo na lista para editar.",
+                    "Erro de entrada de dados",
+                    JOptionPane.ERROR_MESSAGE);  
+        }
     }//GEN-LAST:event_jButtonEditarActionPerformed
 
     private void jButtonProximoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonProximoActionPerformed
@@ -289,6 +314,23 @@ public class JanelaJogador extends javax.swing.JFrame {
             jTextAreaJogador.setText(controller.getTexto());
         }
     }//GEN-LAST:event_jButtonAnteriorActionPerformed
+
+    private void jMenuItemSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemSalvarActionPerformed
+        // TODO add your handling code here:
+        controller.setArquivo("Salvar");
+        controller.escreverJogador();
+        if (controller.escrever(false)) {
+            JOptionPane.showMessageDialog(this,
+                    "Arquivo gravado com sucesso",
+                    "Arquivo gravado",
+                    JOptionPane.INFORMATION_MESSAGE);
+        } else {
+            JOptionPane.showMessageDialog(this,
+                    "Arquivo não foi gravado",
+                    "Arquivo não gravado",
+                    JOptionPane.WARNING_MESSAGE);
+        }
+    }//GEN-LAST:event_jMenuItemSalvarActionPerformed
 
     /**
      * @param args the command line arguments

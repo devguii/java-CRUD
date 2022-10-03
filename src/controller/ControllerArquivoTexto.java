@@ -43,7 +43,7 @@ public class ControllerArquivoTexto extends ControllerArquivo {
         try {
             leitor = new BufferedReader(new FileReader(arquivo));
             while (leitor.ready()) {
-                line.append(leitor.readLine()).append("\n");
+                line.append(leitor.readLine());
             }
             leitor.close();
             setTexto(line.toString());
@@ -73,7 +73,7 @@ public class ControllerArquivoTexto extends ControllerArquivo {
                 escritor.close();
                 return true;
             } catch (IOException erro) {
-                System.err.println(erro.getMessage() + "Erro ao ler arquivo.");
+                System.err.println(erro.getMessage() + "Erro ao escrever arquivo.");
                 return false;
             }
         } else {
