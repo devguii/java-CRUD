@@ -3,17 +3,17 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/Users/gui/Documents/UTFPR/Programacao%20Desktop/main/TrabalhoPratico01/java-CRUD/src/controller/ControllerArquivo.java</file>
-            <file>file:/Users/gui/Documents/UTFPR/Programacao%20Desktop/main/TrabalhoPratico01/java-CRUD/src/view/JanelaJogador.java</file>
-            <file>file:/Users/gui/Documents/UTFPR/Programacao%20Desktop/main/TrabalhoPratico01/java-CRUD/src/controller/ControllerArquivoTexto.java</file>
-            <file>file:/Users/gui/Documents/UTFPR/Programacao%20Desktop/main/TrabalhoPratico01/java-CRUD/src/view/EditorTexto.java</file>
-            <file>file:/Users/gui/Documents/UTFPR/Programacao%20Desktop/main/TrabalhoPratico01/java-CRUD/src/aulabinario/TestaArquivoBinario.java</file>
-            <file>file:/Users/gui/Documents/UTFPR/Programacao%20Desktop/main/TrabalhoPratico01/java-CRUD/src/model/Jogador.java</file>
-            <file>file:/Users/gui/Documents/UTFPR/Programacao%20Desktop/main/TrabalhoPratico01/java-CRUD/src/aulabinario/Cliente.java</file>
-            <file>file:/Users/gui/Documents/UTFPR/Programacao%20Desktop/main/TrabalhoPratico01/java-CRUD/src/aulabinario/InputStreamExemplo.java</file>
-            <file>file:/Users/gui/Documents/UTFPR/Programacao%20Desktop/main/TrabalhoPratico01/java-CRUD/src/view/FileChooserDemo.java</file>
-            <file>file:/Users/gui/Documents/UTFPR/Programacao%20Desktop/main/TrabalhoPratico01/java-CRUD/src/controller/ControllerTextoJogador.java</file>
-            <file>file:/Users/gui/Documents/UTFPR/Programacao%20Desktop/main/TrabalhoPratico01/java-CRUD/src/aulabinario/OutputStreamExemplo.java</file>
+            <file>file:/Users/gui/Documents/UTFPR/Programacao%20Desktop/main/TrabalhoPratico01/java-CRUD1/java-CRUD/src/controller/ControllerTextoJogador.java</file>
+            <file>file:/Users/gui/Documents/UTFPR/Programacao%20Desktop/main/TrabalhoPratico01/java-CRUD1/java-CRUD/src/model/Jogador.java</file>
+            <file>file:/Users/gui/Documents/UTFPR/Programacao%20Desktop/main/TrabalhoPratico01/java-CRUD1/java-CRUD/src/controller/ControllerArquivo.java</file>
+            <file>file:/Users/gui/Documents/UTFPR/Programacao%20Desktop/main/TrabalhoPratico01/java-CRUD1/java-CRUD/src/controller/ControllerTextoTorneio.java</file>
+            <file>file:/Users/gui/Documents/UTFPR/Programacao%20Desktop/main/TrabalhoPratico01/java-CRUD1/java-CRUD/src/view/JanelaTorneio.java</file>
+            <file>file:/Users/gui/Documents/UTFPR/Programacao%20Desktop/main/TrabalhoPratico01/java-CRUD1/java-CRUD/src/view/JanelaJogador.java</file>
+            <file>file:/Users/gui/Documents/UTFPR/Programacao%20Desktop/main/TrabalhoPratico01/java-CRUD1/java-CRUD/src/view/JanelaClube.java</file>
+            <file>file:/Users/gui/Documents/UTFPR/Programacao%20Desktop/main/TrabalhoPratico01/java-CRUD1/java-CRUD/src/controller/ControllerArquivoTexto.java</file>
+            <file>file:/Users/gui/Documents/UTFPR/Programacao%20Desktop/main/TrabalhoPratico01/java-CRUD1/java-CRUD/src/model/Torneio.java</file>
+            <file>file:/Users/gui/Documents/UTFPR/Programacao%20Desktop/main/TrabalhoPratico01/java-CRUD1/java-CRUD/src/model/Clube.java</file>
+            <file>file:/Users/gui/Documents/UTFPR/Programacao%20Desktop/main/TrabalhoPratico01/java-CRUD1/java-CRUD/src/controller/ControllerTextoClube.java</file>
         </group>
     </open-files>
 </project-private>
